@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Music Box ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-glow glow-a"></div>
+  <div class="bg-glow glow-b"></div>
+  <div class="particles" aria-hidden="true"></div>
+
+  <main class="app-shell">
+    <section class="card" id="mainCard">
+      <h1>For You ❤️</h1>
+      <p class="sub">Smart Music Box</p>
+
+      <div class="section active" id="moodStep">
+        <h2>Pick Your Mood</h2>
+        <div class="btn-grid">
+          <button class="choice-btn ripple" data-mood="sad">😔 Miss You</button>
+          <button class="choice-btn ripple" data-mood="happy">😊 Happy</button>
+          <button class="choice-btn ripple" data-mood="romantic">💭 Thinking of You</button>
+          <button class="choice-btn ripple" data-mood="stressed">😌 Calm</button>
+        </div>
+      </div>
+
+      <div class="section" id="platformStep">
+        <h2>Choose Platform</h2>
+        <div class="btn-grid platform-grid">
+          <button class="choice-btn ripple" data-platform="spotify">🎵 Spotify</button>
+          <button class="choice-btn ripple" data-platform="youtube">▶️ YouTube</button>
+        </div>
+        <button class="link-btn" id="backToMood">← Back to Mood</button>
+      </div>
+
+      <div class="section" id="resultStep">
+        <div id="songCard" class="song-card hidden">
+          <div class="song-top">
+            <span id="sourceIcon" class="source-icon">🎵</span>
+            <div>
+              <h3 id="songName">Song</h3>
+              <p id="artistName">Artist</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="messageWrap" class="message-wrap hidden">
+          <p id="messageText"></p>
+          <div id="heartBurst" class="heart-burst" aria-hidden="true">❤️</div>
+        </div>
+
+        <div id="youtubeWrap" class="youtube-wrap hidden">
+          <iframe
+            id="youtubePlayer"
+            title="YouTube Player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <div class="actions">
+          <button class="choice-btn ripple small" id="startOver">Choose Again</button>
+          <button class="music-toggle" id="bgmToggle" aria-pressed="false">🔈 Ambience Off</button>
+        </div>
+      </div>
+
+      <p id="status" class="status"></p>
+    </section>
+  </main>
+
+  <audio id="ambientAudio" loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_20f45f2611.mp3?filename=calm-background-ambient-110190.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

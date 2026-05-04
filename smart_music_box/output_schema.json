@@ -1,0 +1,7 @@
+﻿{
+  "mood": "<detected mood>",
+  "song": "<song name>",
+  "artist": "<artist name>",
+  "message": "<personal message>",
+  "autoplay": true
+}

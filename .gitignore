@@ -1,0 +1,4 @@
+﻿__pycache__/
+*.pyc
+smart_music_box/data/history.json
+.env
