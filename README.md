@@ -16,7 +16,7 @@ HF_TOKEN=your_huggingface_token
 HF_MODEL=mistralai/Mistral-7B-Instruct-v0.3
 SPOTIPY_CLIENT_ID=your_spotify_client_id
 SPOTIPY_CLIENT_SECRET=your_spotify_client_secret
-DEFAULT_NAME=Bacchu
+DEFAULT_NAME=Raha
 PORT=8000
 ```
 
@@ -49,7 +49,7 @@ Request:
 {
   "mood": "happy",
   "platform": "spotify",
-  "name": "Bacchu",
+  "name": "Raha",
   "text": "optional context"
 }
 ```
@@ -57,5 +57,5 @@ Request:
 ## CLI mode (optional)
 
 ```bash
-python smart_music_box/main.py --name "Bacchu" --interactive
+python smart_music_box/main.py --name "Raha" --interactive
 ```
